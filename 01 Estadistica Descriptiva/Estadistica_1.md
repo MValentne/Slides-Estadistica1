@@ -9,6 +9,7 @@ paginate: true
 ## Valentino Mende
 ---
 <!-- _class: lead -->
+# 00
 # Introduccion a la Estadistica
 ## De datos a prediccion
 ---
@@ -124,7 +125,7 @@ Nos subimos a una balanza mal calibrada, la medicion es incorrecta por 5kg...
 * La balanza tiene un problema, por lo que no se aprecia la naturaleza de la balanza.
 * No empleamos estadistica. 
 ---
-## La Estadistica Descriptiva
+# La Estadistica Descriptiva
 Se encarga de los metodos y procedimientos para:
 - Recoger
 - Clasificar
@@ -132,12 +133,49 @@ Se encarga de los metodos y procedimientos para:
 - Hallar regularidades
 - Analizar datos
 ---
-## La Estadistica Inferencial
+# La Estadistica Inferencial
+Obtiene conclusiones a partir de tales datos analizados previamente, con la finalidad de generar predicciones con cierto grado de confianza.
 
 ---
 ## En vista general...
 
-La estadistica entonces dejo de ser una tecnica centrada enlos estados para convertirse en una herramienta imprescindible de todas las ciencias.
+La estadistica entonces dejo de ser una tecnica centrada en los estados para convertirse en una herramienta imprescindible de todas las ciencias.
 
 La estadistica hace inferencias sobre una poblacion, partiendo de una muestra significativa de esta.
+
+---
+
+## Ya hablamos un poco sobre la estadistica, pero cabe concretar conceptos.
+
+---
+# Importancia y definicion
+La estadistica es un conjunto de tecnicas que, partiendo de la observacion de un fenomeno, nos permite conseguir conclusiones utiles. 
+* La estadustuca descriptiva se encarga de la recoleccion, clasificacion y descripcion de datos muestrales o poblacionales para su interpretacion y analisis
+* La estadistica inferencial (o matematica) se basa en la prediccion. Desarrolla modelos teoricos que se ajustan a una determinada realidad con cierto grado de confianza. 
+* Cabe aclarar que estas ramas no son opuestas...
+* Se complementan.
+---
+
+<!-- _class: lead -->
+# 01
+# Conceptos Fundamentales
+## Entramos en contexto, ahora vamos a los detalles.
+--- 
+# Etapas del metodo estadistico
+1. **Planteamiento del problema**: Que se estudiara y por que se tiene que estudiar? Recurrimos a la revision bibliografica del tema (ver investifaciones previamente realizadas).
+2. **Fijacion de objetivos**: Fijamos metas y objetivos; hasta donde se desea presupuestar, hasta donde queremos llegar. 
+3. **Formulacion de hipotesis**: Una explicacion provisional de los hechos y el objeto de estudio. Una hipotesis estadistica debe ser susceptible a probar su veracidad. (Hipotesis nula y alternativa son temas de los que se hablara a futuro.)
+---
+4. **Definicion de la unidad de observacion y de la unidad de medida**: La unidad de observacion corresponde a cada uno de los elementos de la poblacion observada, mientras que la unidad de medida habla de la medida en la que se analizan las variables estudiadas. (metros, kilos, litros...)
+5. **Determinacion de la poblacion y de la muestra**: En notacion conjuntista diriamos que la poblacion es el universo (nuestro dataset entero), mientras que la muestra es un subconjunto de tal universo; un subconjunto significativo, representativo de toda la poblacion (usualmente optamos por esta ultima, estudiamos un pedazo para entender el todo.)
+6. **La recoleccion**: En pocas palabras, la encuesta. Descubrir donde esta la informacion, como y a que costo conseguirla. Se obtiene una aproximacion de la variabilidad de poblacion. 
+---
+7. **Critica, clasificacion y ordenacion**: Se depuran las respuestas falsas o inutilizables, aquellas que estan fuera de lugar para lo que queremos estudiar. Dejado de lado el material desechado, se clasifica y ordena la informacion (usualmente se emplea computo en esta etapa).
+8. **La Tabulacion**: Se crea una tabla para simplificar la comprension de la informacion a quien la este analizando. Es de suma importancia la inclusion de elementos como un titulo adecuado, subtitulos internos y cuantificacion de las variables, y notas de pie de cuadro que otorguen claridad o creditos a quien corresponda.
+9. **La presentacion**: Se trabaja en el informe, se presenta de la forma adecuada. No deseamos redundancia; graficos y tablas que no proporcionen informacion relevante, esto solo es confuso.  
+--- 
+10. **El analisis**: Es donde se cristaliza la investigacion. Buscamos establecer y redactar las conclusiones definitivas. Se determinan los parametros y estadisticos muestrales para las estimaciones e inferencias sobre la poblacion.	
+11. **Publicacion**: "Toda conclusion es digna de ser comunicada en un auditorio". Buscamos dar a luz nuestra investigacion. Es posible que otros investigadores o estudiosos esten interesados en nuestro trabajo.
+---
+# Conceptos clave
 
