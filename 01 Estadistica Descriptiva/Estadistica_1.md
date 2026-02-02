@@ -178,4 +178,23 @@ La estadistica es un conjunto de tecnicas que, partiendo de la observacion de un
 11. **Publicacion**: "Toda conclusion es digna de ser comunicada en un auditorio". Buscamos dar a luz nuestra investigacion. Es posible que otros investigadores o estudiosos esten interesados en nuestro trabajo.
 ---
 # Conceptos clave
+- **Unidad de analisis**: Un elemento de la poblacion/universo que se esta estudiando
+- **Poblacion o universo**: Representa un conjunto de todas las unidades de analisis que conforman el objeto de estudio. Se representa con (N).
+- **Muestra**: Subconjunto significativo de la poblacion. Se representa con (n).
+- **Parametro**: Cualquier funcion (digase, funcion estadistica como media aritmetica) sque determine una caracteristica numerica de la poblacion.
+---
+- **Estadistico/Estimador**: Caracteristica numerica de una muestra (Nuevamente una funcion, esta vez aplicada a un subconjunto).
+- **Variables**: Propiedades, caracteristicas, cualidades... de los elementos de una poblacion. Se dividen en:
+* Cuantitativas: discretas en caso de que sea contado en valores enteros, continuas en caso de requerir medidas intermedias entre valores (fraccionarias).
+* Cualitativas: nominales si no siguen un criterio u orden, y ordinal si es que si lo siguen.
+---
+
+<!-- _class: lead -->
+# 02 
+# Distribucion de frecuencia
+## Agrupando datos...
+
+---
+
+
 
