@@ -1,11 +1,12 @@
 ---
 marp: true
-theme: gaia
+theme: academic 
 math: katex
 paginate: true
 ---
 # Estadistica I
 # UNM - FCEQyN - 2025
+## Valentino Mende
 ---
 <!-- _class: lead -->
 # Introduccion a la Estadistica
@@ -96,3 +97,47 @@ $$I = \log_2(6) \approx 2.585 \text{ bits}$$
 <!-- _class: lead -->
 # La Estadistica
 ## Nos adentramos un poco mas...
+---
+Al hablar de estadistica nos llega a la mente un conjunto de datos a estudiar, usualmente llamado "dataset"
+- Una representacion ordenada y sistematica de los datos
+* Hoy en dia podemos extraer un dataset de practicamente cualquier topico.
+* vease [Google Dataset Research](https://datasetsearch.research.google.com/)
+* vease [TidyTuesday](https://github.com/rfordatascience/tidytuesday?utm_source=chatgpt.com)
+---
+Para ciertos campos, la estadistica resulta ser la herramienta principal para dar luz y obtener resultados.
+- Esta es mas visible en las ciencias sociales.
+- Esta fuertemente ingtegrada en la estructura de otros campos, tales como:
+* Fisica
+* Biologia y Medicina
+* Ciencia de datos / Machine learning
+* Economia
+* Etc.
+--- 
+La estadistica se encarga de los metodos y procedimientos para recoger, clasificar, resumir, hallar regularidades y analizar los datos; siempre y cuando la variabilidad de incertidumbre de tales datos correspondan a la naturaleza propia de estos y no de algun factor externo. 
+* **Ejemplifiquemos...**
+---
+Tiramos 100 veces una moneda...
+* Algunas veces sale cara, algunas veces sale cruz.
+* Es la naturaleza de la moneda, por lo que podemos emplear estadistica.
+
+Nos subimos a una balanza mal calibrada, la medicion es incorrecta por 5kg...
+* La balanza tiene un problema, por lo que no se aprecia la naturaleza de la balanza.
+* No empleamos estadistica. 
+---
+## La Estadistica Descriptiva
+Se encarga de los metodos y procedimientos para:
+- Recoger
+- Clasificar
+- Resumir
+- Hallar regularidades
+- Analizar datos
+---
+## La Estadistica Inferencial
+
+---
+## En vista general...
+
+La estadistica entonces dejo de ser una tecnica centrada enlos estados para convertirse en una herramienta imprescindible de todas las ciencias.
+
+La estadistica hace inferencias sobre una poblacion, partiendo de una muestra significativa de esta.
+
