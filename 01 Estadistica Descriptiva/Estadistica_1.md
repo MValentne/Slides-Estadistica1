@@ -172,7 +172,7 @@ La estadistica es un conjunto de tecnicas que, partiendo de la observacion de un
 ---
 7. **Critica, clasificacion y ordenacion**: Se depuran las respuestas falsas o inutilizables, aquellas que estan fuera de lugar para lo que queremos estudiar. Dejado de lado el material desechado, se clasifica y ordena la informacion (usualmente se emplea computo en esta etapa).
 8. **La Tabulacion**: Se crea una tabla para simplificar la comprension de la informacion a quien la este analizando. Es de suma importancia la inclusion de elementos como un titulo adecuado, subtitulos internos y cuantificacion de las variables, y notas de pie de cuadro que otorguen claridad o creditos a quien corresponda.
-9. **La presentacion**: Se trabaja en el informe, se presenta de la forma adecuada. No deseamos redundancia; graficos y tablas que no proporcionen informacion relevante, esto solo es confuso.  
+9. **La presentacion**: Se trabaja en el informe, se presenta de la forma adecuada. No deseamos redundancia; graficos y tablas que no proporcionen informacion relevante, esto solo es confuso. 
 --- 
 10. **El analisis**: Es donde se cristaliza la investigacion. Buscamos establecer y redactar las conclusiones definitivas. Se determinan los parametros y estadisticos muestrales para las estimaciones e inferencias sobre la poblacion.	
 11. **Publicacion**: "Toda conclusion es digna de ser comunicada en un auditorio". Buscamos dar a luz nuestra investigacion. Es posible que otros investigadores o estudiosos esten interesados en nuestro trabajo.
@@ -195,6 +195,93 @@ La estadistica es un conjunto de tecnicas que, partiendo de la observacion de un
 ## Agrupando datos...
 
 ---
+# Sobre la distribucion de frecuencias
+Habla de agrupaciones de datos segun su clase, a esta clase se le denomina modalidad del caracter estadistico.
+Ejemplo:
+| Tamaño (KB) | Frecuencia Absoluta (fᵢ) | Frecuencia Acumulada (Fᵢ) |
+|:---:|:---:|:---:|
+| 0 – 100 | 22 | 22 |
+| 100 – 200 | 35 | 57 |
+| 200 – 300 | 24 | 81 |
+| 300 – 400 | 13 | 94 |
+| 400 – 500 | 6 | 100 |
+| **Total** | **100** | — |
+
+---
+En el esquema anterior se muestra una organizacion de datos mediante una tabla.
+El objetivo es acomodar el dataset de forma util para simplificar el analisis de la informacion contenida. 
+* **Frecuencia absoluta**: Cantidad de veces que una modalidad ha sido observada (digase el numero de veces que aparece dicho valor de la variable)
+* se representa con f[i].
+* **Frecuencia relativa**: Tiene relacion con la cantidad total del tamano de muestra.
+* digase: _h[i] = Fr = fi/N_, que da de resultado un valor entre [0,1].
+* Al multiplicar por 100, pasa a ser una frecuencia porcentual.
+---
+- **Frecuencia absoluta acumulada**: Es la suma progresiva de las frecuencias absolutas de cada clase o intervalo. 
+* En pocas palabras, dice cuantos datos hay hasta tal modalidad.
+* Cabe especificar que la variable debe ser cuantitativa o cualitativa ordenable para que esta tenga sentido.
+---
+# Intervalos de clase
+Un intervalo se usa cuando una variable es cuantitativa continua o los datos son discretos, pero muy numerosos. 
+Llamaremos amplitud, longitud o ancho del intervalo a la diferencia entre el extremo inferior del intervalo y el inferior del siguiente intervalo.
+
+---
+**Ejemplo:**
+
+|   |   limite inferior |   limite superior |
+|:---:|:---:|:---:|
+| [10,15)  |   10   |               15
+| [15,20)  |   15   |               20
+|[20,25)   |  20    |              25
+| [25,30)  |   25   |               30
+---
+
+## Algunas ideas clave
+**Marca de clase**: Punto medio de cada intervalo, digase: [15,20], Marca de clase = (15+20)/2 = 17.5
+- Surgen 3 preguntas de interes:
+1. Cuantas clases deben usarse?
+2. Cual debe ser la amplitud de clase?
+3. En que valor debe empezar la primera clase?
+
+--- 
+///////////////// Aplicar LaTeX
+
+1. Si usamos pocas clases, perderemos informacion; y si usamos demasiadas puede que alguna clase no tenga valor. Entonces cuantas clases debemos usar?
+* Usamos Sturges. C = cantidad de clases; C = 3.32 x log(n) + 1 
+ 
+---
+2. Cual debe ser la amplitud? Esta se encuentra al usar el rango de la muestra (R).
+* R = diferencia entre la medida mayor y la menor de la muestra
+* R = U(limite superior) - L(limite inferior)
+* Amplitud = A = R/U 
+---
+3. En que valor empieza la primera clase? 
+* Respuesta simple, en el limite inferior de la muestra (L).
+---
+<!-- _class: lead -->
+# 03
+# Graficos estadisticos
+## Representando informacion...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
