@@ -23,6 +23,53 @@ Ahora queremos ir un paso más allá: **predecir**.
 
 ---
 <!-- _class: lead -->
+# Un poco de historia
+## Porque nada surge de la nada.
+---
+# Origen de la Combinatoria
+
+La combinatoria no nació en un aula. Nació de problemas concretos que la humanidad quería resolver.
+
+* Los **cuadrados mágicos** aparecen en un libro chino fechado en el año 2200 a.C.
+* Los **coeficientes binomiales** ya eran conocidos en el siglo XII.
+* El **triángulo de Pascal** fue desarrollado en el siglo XIII, antes de que Pascal naciera.
+
+---
+En Occidente, la combinatoria se consolidó en el siglo XVII con los trabajos de **Pascal** y **Fermat** sobre juegos de azar.
+
+El término *"combinatoria"* tal como lo usamos hoy fue introducido por **Leibniz** en su *Dissertatio de Arte Combinatoria*.
+
+* Fue **Euler** quien desarrolló a principios del siglo XVIII una auténtica escuela de matemática combinatoria.
+* También se lo considera el padre de la **teoría de grafos**, disciplina que hoy es central en informática.
+
+---
+# Origen de la Probabilidad
+
+El azar siempre fascinó al ser humano.
+
+* Los **sumerios y asirios** usaban el astrágalo, un hueso del talón de animales tallado para caer en cuatro posiciones: precursor del dado.
+* Los **egipcios** registraban los resultados en tableros pintados en las tumbas de los faraones.
+* La palabra **"azar"** proviene del árabe *al-azar*, que significa "dado". Dante ya la usaba en el *Purgatorio*.
+
+---
+La historia formal de la probabilidad comienza en el siglo XVII, cuando **Pascal y Fermat** intercambiaron una correspondencia histórica tratando de resolver problemas de juegos de azar.
+
+En 1657, **Christian Huygens** publicó el primer libro sobre probabilidad: *De Ratiociniis in Ludo Aleae*.
+
+* En 1812, **Laplace** publicó su *Théorie analytique des probabilités*.
+* A mediados del siglo XIX, **Gregor Mendel** aplicó la probabilidad a la genética.
+* Recién a principios del siglo XX, **Andrei Kolmogorov** la definió de forma axiomática, dándole a la probabilidad su forma matemática definitiva.
+
+---
+## Retomando...
+
+Dos disciplinas que nacieron de dados, huesos y apuestas terminaron siendo el fundamento de la inteligencia artificial, la genética y la seguridad informática.
+
+* La combinatoria y la probabilidad siempre estuvieron entrelazadas.
+* Lo que sigue es formalizar lo que la humanidad tardó siglos en construir.
+
+---
+<!-- _class: lead -->
 # 00
 # Técnicas de Conteo y Combinatoria
 ## Antes de calcular probabilidades, hay que saber contar.
