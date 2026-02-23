@@ -88,7 +88,7 @@ La teoría de probabilidades asigna un número a cada posible resultado de un ex
 La combinatoria se encarga de encontrar todas las opciones posibles o agrupamientos que se pueden formar con un conjunto de elementos (m), organizados según algunos criterios.
 
 * Es especialmente útil cuando hay un gran número de posibilidades.
-* ¿Recordás la paradoja del cumpleaños? Esto es exactamente lo que estaba detrás.
+* ¿Recuerdan la paradoja del cumpleaños? Esto es exactamente lo que estaba detrás.
 
 ---
 # a) Factorial
@@ -103,7 +103,7 @@ Siendo que $n \in \mathbb{N}$, $0! = 1$ y $1! = 1$
 ## El principio de la multiplicación
 
 Si un suceso se puede realizar de $m$ formas y luego otro de $n$ formas, el número total de formas en que pueden ocurrir es $m \times n$.
-
+  
 **Ejemplo:** 5 personas, ¿de cuántas maneras pueden ingresar de a una a un consultorio?
 
 En el primer llamado hay 5 opciones, en el segundo hay 4, en el tercero 3, y así hasta llegar a 1.
@@ -471,9 +471,33 @@ A veces calcular la probabilidad de que algo ocurra *al menos una vez* es difíc
 
 $$P(\text{al menos una vez}) = 1 - P(\text{ninguna vez})$$
 
-**Ejemplo:** Baraja de 40 cartas. ¿Probabilidad de sacar al menos 1 as en 2 extracciones sin reposición?
+**Ejemplo:** Baraja española de 40 cartas (4 ases).  
+¿Probabilidad de sacar al menos 1 as en 2 extracciones sin reposición?
 
-$$p(\text{al menos 1 as}) = 1 - \frac{35673}{54145} = \frac{18472}{54145}$$
+---
+
+Primero calculamos el complemento (ningún as):
+
+$$
+P(\text{ningún as}) =
+\frac{\binom{36}{2}}{\binom{40}{2}}
+$$
+
+$$
+\binom{40}{2} = 780
+\qquad
+\binom{36}{2} = 630
+$$
+
+$$
+P(\text{ningún as}) = \frac{630}{780} = \frac{21}{26}
+$$
+
+Ahora aplicamos el complemento:
+
+$$
+P(\text{al menos 1 as}) = 1 - \frac{21}{26} = \frac{5}{26}
+$$
 
 ---
 <!-- _class: lead -->
