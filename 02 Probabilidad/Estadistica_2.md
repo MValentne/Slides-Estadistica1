@@ -557,6 +557,13 @@ En el final de cada rama parcial se constituye un **nudo** del cual parten nueva
 Hay que tener en cuenta: **la suma de probabilidades de las ramas de cada nudo ha de dar 1**.
 
 ---
+
+<!-- _class: invert -->
+![bg contain](../assets/img/arbol_probabilidad.png)
+
+
+
+---
 ## Ejemplo: comité de 3 personas
 
 Clase con 10 niños y 6 niñas. Se elige un comité de 3 al azar.
@@ -574,7 +581,7 @@ $$p(2\ niñas\ y\ 1\ niño) = \frac{10}{16} \cdot \frac{6}{15} \cdot \frac{5}{14
 **P(3 niñas):**
 $$p(3\ niñas) = \frac{6}{16} \cdot \frac{5}{15} \cdot \frac{4}{14} = 0.0357$$
 
-* ¿Notás que los cuatro resultados suman 1? Tiene que ser así: cubren todos los casos posibles.
+* Los cuatro resultados suman uno. Tiene que ser así: cubren todos los casos posibles.
 
 ---
 # Experimentos Compuestos
