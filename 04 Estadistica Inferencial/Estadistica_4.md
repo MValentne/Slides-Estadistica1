@@ -41,9 +41,11 @@ Requiere equipos en cada localidad y provincia, meses de trabajo y un presupuest
 ---
 La estadística inferencial paramétrica tiene exactamente ese fin: **obtener conclusiones sobre parámetros poblacionales** usando como puente los estadísticos muestrales, sus distribuciones en el muestreo, y herramientas como el Teorema del Límite Central, el error estándar y los intervalos de confianza.
 
+Para eso necesitamos entender bien la relación entre lo que *medimos* en la muestra y lo que *existe* en la población. Ese es el punto de partida.
+
 ---
 <!-- _class: lead -->
-# 00
+# 01
 # Parámetros y Estimadores
 ## Dos mundos, un vínculo.
 ---
@@ -53,9 +55,24 @@ La estadística inferencial paramétrica tiene exactamente ese fin: **obtener co
 |:---:|:---:|
 | Media poblacional $\mu$ | Media muestral $\bar{x}$ |
 | Desvío estándar $\sigma$ | Desvío muestral $s$ |
-| Proporción poblacional $P$ | Proporción muestral $\hat{p}$ |
+| Proporción poblacional $P$ | Proporción muestral $\hat{p} = \dfrac{\text{casos con la característica}}{n}$ |
 
 En Estadística I nos concentraremos en la **media poblacional** y su estimador, sin perder de vista que existen otros parámetros con sus propios estimadores específicos.
+
+---
+# ¿Cuándo usamos cada uno?
+
+No toda variable se resume con una media. La elección del estimador depende de la naturaleza de lo que queremos medir.
+
+**Usamos media poblacional** $\mu$ cuando la variable es cuantitativa: queremos saber *cuánto*.
+- ¿Cuántos años lleva cursando el alumno promedio de Analítica?
+- ¿Cuál es la altura media de una especie de planta?
+
+**Usamos proporción poblacional** $P$ cuando la variable es cualitativa o binaria: queremos saber *qué fracción* de la población tiene una característica.
+- ¿Qué porcentaje de alumnos trabaja y estudia a la vez?
+- ¿Qué proporción de hogares está bajo la línea de pobreza?
+
+* La distinción parece simple, pero elegir mal el estimador invalida toda la inferencia posterior.
 
 ---
 Hay una diferencia clave que no se puede perder de vista.
@@ -68,7 +85,7 @@ La **media muestral** $\bar{x}$ es una **variable aleatoria continua**: cada mue
 
 ---
 <!-- _class: lead -->
-# 01
+# 02
 # Métodos de Muestreo Aleatorio
 ## No todas las muestras se toman igual.
 ---
@@ -100,7 +117,7 @@ El **error de muestreo** es la diferencia entre un estadístico muestral y su pa
 
 ---
 <!-- _class: lead -->
-# 02
+# 03
 # Distribución de Muestreo de Medias
 ## ¿Qué pasa si tomamos muchas muestras?
 ---
@@ -109,6 +126,8 @@ El **error de muestreo** es la diferencia entre un estadístico muestral y su pa
 Si tomamos una muestra y calculamos $\bar{x}$, obtenemos un número. Si tomamos otra muestra, obtenemos otro. Si tomamos *todas* las muestras posibles de tamaño $n$, obtenemos una **distribución de probabilidad**.
 
 A esa distribución se la llama **distribución de muestreo de medias muestrales**: es la distribución de probabilidad de todas las medias posibles de un tamaño de muestra dado, con su probabilidad de ocurrencia asociada.
+
+$$\text{Población} \xrightarrow{\text{Muestra 1}} \bar{x}_1,\quad \xrightarrow{\text{Muestra 2}} \bar{x}_2,\quad \ldots \xrightarrow{\text{Muestra k}} \bar{x}_k \longrightarrow \text{Distribución muestral de } \bar{x}$$
 
 ---
 # Un ejemplo concreto
@@ -137,7 +156,7 @@ Organizando las 10 medias posibles se construye la distribución de muestreo:
 | 26 | 3 | 3/10 |
 | 28 | 2 | 2/10 |
 
-Esta tabla **es** la distribución de muestreo: a cada posible media le asignamos su probabilidad de ocurrencia.
+Esta tabla **es** la distribución de muestreo: a cada posible $\bar{x}$ le asignamos su probabilidad de ocurrencia.
 
 ---
 # La propiedad fundamental
@@ -157,18 +176,9 @@ $$\mu = \frac{22 + 26 + 30 + 26 + 22}{5} = 25{,}2$$
 
 ---
 <!-- _class: lead -->
-# 03
+# 04
 # Teorema del Límite Central
 ## El resultado más poderoso de la estadística.
----
-# ¿Qué forma tiene esa distribución?
-
-Ya sabemos que $\mu_{\bar{x}} = \mu$: en promedio, la media muestral no nos engaña.
-
-Pero nos queda la pregunta más importante: ¿qué **forma** tiene esa distribución cuando las muestras son grandes?
-
-La respuesta la da el **Teorema del Límite Central**.
-
 ---
 # Teorema del Límite Central
 
@@ -196,7 +206,7 @@ A medida que $n$ crece, el error estándar **disminuye**: muestras más grandes 
 
 ---
 <!-- _class: lead -->
-# 04
+# 05
 # Estimaciones Puntuales
 ## Un primer paso hacia la inferencia.
 ---
@@ -215,7 +225,9 @@ Una estimación puntual tiene una ventaja obvia: es simple y directa.
 
 Pero tiene una limitación importante: **no dice cuán precisa es esa estimación**.
 
-Si medimos 36 plantas y calculamos $\bar{x} = 1{,}6$ m, sabemos ese valor. Pero, ¿cuán cerca estamos de la media real? ¿Podría estar en 1,5 m? ¿En 1,9 m?
+**Ejemplo:** Se quiere saber la altura media de una planta. Se muestrean 36 ejemplares y se obtiene $\bar{x} = 1{,}6$ m con un desvío poblacional conocido de $\sigma = 0{,}60$ m.
+
+La estimación puntual nos dice que la media poblacional es *probablemente* 1,6 m. Pero, ¿podría estar en 1,5 m? ¿En 1,9 m? ¿Con qué confianza lo afirmamos?
 
 * La estimación puntual sola no responde eso.
 * Para eso necesitamos los **intervalos de confianza**, que serán el tema de la Unidad 5.
@@ -240,7 +252,7 @@ Ante la pregunta "¿cuál es la media de años de cursado en alumnos de Analíti
 # Lo que construimos
 
 **Parámetros y estimadores:**
-La relación entre lo que existe en la población y lo que medimos en la muestra.
+La relación entre lo que existe en la población y lo que medimos en la muestra, y cuándo usar media vs. proporción.
 
 **Métodos de muestreo:**
 Cómo seleccionar muestras representativas para que la inferencia sea legítima.
@@ -271,8 +283,10 @@ Eso es exactamente lo que haremos en la Unidad 5.
 3. ¿Qué diferencia hay entre la media poblacional y la media muestral?
 4. ¿Cuál es la principal herramienta de Estadística I y qué parámetro estima?
 5. ¿Cuáles son los tipos de muestreo aleatorio? ¿Qué ventajas tiene muestrear?
-6. ¿Qué establece el Teorema del Límite Central?
-7. ¿Cuál es la diferencia entre error estándar del estimador y desvío estándar poblacional?
+6. ¿Cuándo se usa proporción poblacional y cuándo media poblacional?
+7. Presentar simbólicamente la distribución de muestreo del estimador media muestral.
+8. ¿Qué establece el Teorema del Límite Central?
+9. ¿Cuál es la diferencia entre error estándar del estimador y desvío estándar poblacional?
 
 ---
 <!-- _class: lead -->
@@ -282,4 +296,5 @@ Eso es exactamente lo que haremos en la Unidad 5.
 **Estadística I**
 UNM - FCEQyN - 2025
 
-*"Una muestra bien tomada vale más que un censo mal hecho."*
+*"La estadística es la gramática de la ciencia."*
+— Karl Pearson
