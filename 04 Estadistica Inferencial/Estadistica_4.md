@@ -65,14 +65,13 @@ En Estadística I nos concentraremos en la **media poblacional** y su estimador,
 No toda variable se resume con una media. La elección del estimador depende de la naturaleza de lo que queremos medir.
 
 **Usamos media poblacional** $\mu$ cuando la variable es cuantitativa: queremos saber *cuánto*.
-- ¿Cuántos años lleva cursando el alumno promedio de Analítica?
+- ¿Cuántos años lleva cursando el alumno promedio de Ciencia de Datos?
 - ¿Cuál es la altura media de una especie de planta?
 
 **Usamos proporción poblacional** $P$ cuando la variable es cualitativa o binaria: queremos saber *qué fracción* de la población tiene una característica.
 - ¿Qué porcentaje de alumnos trabaja y estudia a la vez?
 - ¿Qué proporción de hogares está bajo la línea de pobreza?
 
-* La distinción parece simple, pero elegir mal el estimador invalida toda la inferencia posterior.
 
 ---
 Hay una diferencia clave que no se puede perder de vista.
@@ -141,6 +140,8 @@ El estudio jurídico **Hoya & Asociados** tiene cinco socios. Cada semana inform
 | Torres | 30 |
 | Carrizo | 26 |
 | Salgado | 22 |
+
+---
 
 ¿Cuántas muestras de tamaño 2 son posibles?
 
@@ -235,7 +236,7 @@ La estimación puntual nos dice que la media poblacional es *probablemente* 1,6 
 ---
 # Tres caminos posibles
 
-Ante la pregunta "¿cuál es la media de años de cursado en alumnos de Analítica?", hay tres opciones:
+Ante la pregunta "¿cuál es la media de años de cursado en alumnos de Ciencia de Datos?", hay tres opciones:
 
 **Camino 1 — Censo:** conseguir la base completa y calcular $\mu$ directamente. Ideal, pero costoso y a veces imposible.
 
@@ -273,20 +274,7 @@ La inferencia estadística no es magia.
 
 Es una consecuencia directa del TLC: si sabemos que $\bar{x}$ se distribuye normalmente alrededor de $\mu$, podemos razonar en la dirección inversa y **usar $\bar{x}$ para construir afirmaciones cuantificables sobre $\mu$**.
 
-Eso es exactamente lo que haremos en la Unidad 5.
-
----
-# Preguntas guía
-
-1. ¿Cuál es el fin de la estadística inferencial paramétrica y de qué se vale para ello?
-2. ¿Cuáles son los estimadores y sus parámetros correspondientes?
-3. ¿Qué diferencia hay entre la media poblacional y la media muestral?
-4. ¿Cuál es la principal herramienta de Estadística I y qué parámetro estima?
-5. ¿Cuáles son los tipos de muestreo aleatorio? ¿Qué ventajas tiene muestrear?
-6. ¿Cuándo se usa proporción poblacional y cuándo media poblacional?
-7. Presentar simbólicamente la distribución de muestreo del estimador media muestral.
-8. ¿Qué establece el Teorema del Límite Central?
-9. ¿Cuál es la diferencia entre error estándar del estimador y desvío estándar poblacional?
+Eso es exactamente lo que haremos en la Unidad 5.   
 
 ---
 <!-- _class: lead -->
