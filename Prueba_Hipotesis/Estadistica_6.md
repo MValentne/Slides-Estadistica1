@@ -27,6 +27,15 @@ Ahora queremos ir un paso más allá: **tomar decisiones con esas estimaciones**
 # Inferencia y el Problema de los Datos Parciales
 ## Nunca tenemos todo. Aprendemos a trabajar con lo que hay.
 ---
+Antes de probar hipótesis, hay que entender *por qué* trabajamos con muestras.
+
+No es una limitación metodológica. Es la **realidad de los sistemas**.
+
+* Los datos completos no existen. Existen logs, registros, muestras.
+* Lo que calculamos sobre la muestra es una *estimación* del parámetro real.
+* La inferencia es el puente que une ambos mundos.
+
+---
 # El Problema en Sistemas Reales
 
 Como profesionales de sistemas, rara vez tenemos acceso a la totalidad de los datos.
@@ -56,6 +65,15 @@ $$\bar{X} \sim N\!\left(\mu,\ \frac{\sigma}{\sqrt{n}}\right)$$
 # Hipótesis, Errores y P-Valor
 ## Plantear bien la pregunta es la mitad de la respuesta.
 ---
+Toda prueba de hipótesis es, en el fondo, una pregunta formal.
+
+*¿Los datos que tengo son compatibles con lo que se afirma?*
+
+* Primero hay que formular la pregunta correctamente.
+* Después hay que saber qué significa equivocarse.
+* Y finalmente, interpretar el resultado sin caer en errores clásicos.
+
+---
 # Hipótesis Nula e Hipótesis Alternativa
 
 Toda prueba parte de **dos hipótesis opuestas**:
@@ -72,7 +90,7 @@ $$H_0: \mu = 50 \qquad H_1: \mu \neq 50$$
 ---
 ## Una aclaración que no es menor
 
-> ⚠️ **Nunca se dice "Acepto $H_0$".**
+> **Nunca se dice "Acepto $H_0$".**
 
 La prueba no demuestra que $H_0$ sea verdadera. Solo evalúa si hay *evidencia suficiente* para rechazarla.
 
@@ -95,33 +113,68 @@ Donde $\alpha$ es el **nivel de significancia** elegido previamente (típicament
 * Un p-valor pequeño dice: "esto sería muy raro si $H_0$ fuera cierta". La evidencia habla.
 
 ---
+# Los dos errores posibles
+
+Al decidir sobre $H_0$, podemos equivocarnos de dos maneras distintas:
+
+| | $H_0$ es verdadera | $H_0$ es falsa |
+|:---|:---:|:---:|
+| **Rechazo $H_0$** | Error Tipo I ($\alpha$) | Decisión correcta |
+| **No rechazo $H_0$** | Decisión correcta | Error Tipo II ($\beta$) |
+
+* **Error Tipo I:** rechazar $H_0$ cuando en realidad es verdadera. La probabilidad de cometerlo es exactamente $\alpha$.
+* **Error Tipo II:** no rechazar $H_0$ cuando en realidad es falsa. Su probabilidad es $\beta$.
+
+Elegir $\alpha$ pequeño reduce el Error Tipo I, pero aumenta el riesgo del Tipo II. Siempre hay un trade-off.
+
+---
 <!-- _class: lead -->
 # 03
 # Criterio de Selección: ¿Z o T?
 ## La herramienta depende de lo que sabemos.
 ---
+Ya sabemos plantear hipótesis. Ahora hay que elegir *con qué herramienta* las probamos.
+
+No es una decisión arbitraria. Depende de **lo que conocemos** del problema.
+
+* ¿Tenemos el desvío real de la población, o solo el de la muestra?
+* ¿Cuántos datos tenemos?
+* La respuesta a esas dos preguntas determina todo lo que sigue.
+
+---
 # ¿Cuándo usar cada distribución?
 
-La elección entre Z y T depende de dos factores: **¿conocemos $\sigma$?** y **¿qué tan grande es la muestra?**
+Dos preguntas, en orden:
 
-| Condición | Distribución |
-|:---|:---:|
-| Conocemos $\sigma$ poblacional | **Z** |
-| $n \geq 30$ (por TCL) | **Z** |
-| Desconocemos $\sigma$, usamos $S$, y $n < 30$ | **T-Student** |
+**① ¿Conozco $\sigma$ poblacional?**
+→ Sí: **uso Z**, sin importar el tamaño de la muestra.
+→ No: paso a la segunda pregunta.
+
+**② ¿$n \geq 30$?**
+→ Sí: **uso Z** igualmente, gracias al TCL.
+→ No ($n < 30$): **uso T-Student**.
 
 * La T-Student requiere además asumir que la población de origen es **aproximadamente normal**.
 * Los grados de libertad se calculan como $gl = n - 1$.
 
 ---
 <!-- _class: lead -->
-# Bloque A
 # Muestras Grandes
-## Cuando $n \geq 30$: usamos Z.
+## $n \geq 30$: el TCL nos respalda.
 ---
-El estadístico Z mide cuántos errores estándar se aleja la media muestral del valor hipotético:
+Con muestras grandes, el TCL garantiza que la distribución de medias es Normal.
 
-$$Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$$
+Eso nos da permiso de usar **Z**, aunque no conozcamos $\sigma$ de la población.
+
+* El estadístico calculado se compara contra un límite crítico fijo.
+* Si lo supera, la diferencia es demasiado grande para ser solo azar.
+
+---
+# Estadístico de Prueba Z
+
+$$Z_{calc} = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$$
+
+Si $Z_{calc}$ cae fuera de los límites críticos, hay evidencia para rechazar $H_0$.
 
 Los límites críticos dependen del tipo de prueba y del nivel $\alpha$:
 
@@ -192,21 +245,38 @@ $$Z = \frac{15800 - 15000}{3000/\sqrt{100}} = \frac{800}{300} = \mathbf{2.67}$$
 **Conclusión:** Las ventas aumentaron significativamente.
 
 ---
+## Retomando...
+
+Cuatro situaciones distintas, cuatro veces el mismo proceso.
+
+* Bilateral cuando no sabemos hacia dónde puede ir el cambio.
+* Unilateral cuando la pregunta tiene dirección: ¿mejoró? ¿empeoró?
+* La conclusión siempre cierra con palabras, no solo con números.
+
+Lo que sigue es el mismo procedimiento, pero con una herramienta diferente.
+
+---
 <!-- _class: lead -->
-# Bloque B
 # Muestras Pequeñas
-## Cuando $n < 30$: usamos T-Student.
+## $n < 30$: la incertidumbre es mayor.
+---
+Con pocos datos, el TCL ya no aplica.
+
+La distribución Z subestima la variabilidad real de la muestra.
+
+* Necesitamos una herramienta que reconozca esa incertidumbre adicional.
+* La **T-Student** tiene colas más anchas: es más conservadora, más honesta.
+* Cuantos más grados de libertad, más se parece a la Z.
+
 ---
 # La distribución T-Student
 
-Cuando la muestra es pequeña y no conocemos $\sigma$, la distribución Z ya no es confiable.
-
-La **T-Student** tiene una forma similar a la Normal pero con colas más anchas, reconociendo la mayor incertidumbre de muestras chicas.
+La **T-Student** reconoce que con muestras chicas, la incertidumbre es mayor.
 
 $$T = \frac{\bar{x} - \mu_0}{S / \sqrt{n}} \qquad \text{con } gl = n - 1 \text{ grados de libertad}$$
 
-* A medida que $n$ crece, la T se parece cada vez más a la Z.
-* El valor crítico se busca en la **tabla T** con los grados de libertad correspondientes.
+* El valor crítico no es fijo: depende de $gl$ y se consulta en la **tabla T**.
+* A medida que $n$ crece, los valores T se acercan a los valores Z.
 
 ---
 ## Ejemplo: Temperatura de una GPU
@@ -312,5 +382,5 @@ En estadística no eliminamos la incertidumbre. **Aprendemos a cuantificarla y a
 **Estadística I**
 UNM - FCEQyN - 2025
 
-*"En Dios confiamos. Todos los demás deben traer datos."*
-— W. Edwards Deming
+*"El experimento es el único juez de la verdad científica."*
+— Richard Feynman
