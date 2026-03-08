@@ -31,27 +31,15 @@ Se escribe con mayúsculas ($X$, $Y$, $Z$); sus realizaciones con minúsculas ($
 
 ---
 
-# Distribución de Probabilidad
+# Distribución de Probabilidad y Parámetros
 
-Asocia a cada valor $x_i$ su probabilidad $p_i = P(X = x_i)$.
-
-**Condiciones obligatorias:**
+Asocia a cada valor $x_i$ su probabilidad $p_i = P(X = x_i)$, con condiciones:
 $$0 \leq p_i \leq 1 \qquad \sum p_i = 1$$
 
-**Función acumulada:**
-$$F(x_i) = P(X \leq x_i)$$
+**Función acumulada:** $F(x_i) = P(X \leq x_i)$ — permite calcular probabilidades de intervalos.
 
-Permite calcular probabilidades de intervalos sin sumar caso por caso.
-
----
-
-# Parámetros de una Variable Aleatoria Discreta
-
-$$E(X) = \mu = \sum x_i \cdot p_i \qquad \text{(Esperanza)}$$
-
-$$\sigma^2 = \sum (x_i - \mu)^2 \cdot p_i = \sum x_i^2 \cdot p_i - \mu^2 \qquad \text{(Varianza)}$$
-
-$$\sigma = \sqrt{\sigma^2} \qquad \text{(Desviación típica)}$$
+**Parámetros:**
+$$E(X) = \mu = \sum x_i \cdot p_i \qquad \sigma^2 = \sum x_i^2 \cdot p_i - \mu^2 \qquad \sigma = \sqrt{\sigma^2}$$
 
 ---
 
@@ -60,27 +48,15 @@ $$\sigma = \sqrt{\sigma^2} \qquad \text{(Desviación típica)}$$
 
 ---
 
-# Distribución Uniforme
+# Modelos base: Uniforme y Bernoulli
 
-Todos los resultados son **igualmente probables**.
-
+**Uniforme** — todos los resultados son igualmente probables:
 $$P(X = x_i) = \frac{1}{k}$$
+*Ejemplo: cada cara de un dado tiene probabilidad $\frac{1}{6}$.*
 
-El modelo más simple — punto de partida antes de los modelos específicos.
-
-*Ejemplo: cada cara de un dado tiene probabilidad $\dfrac{1}{6}$.*
-
----
-
-# Distribución de Bernoulli
-
-Un experimento sigue Bernoulli si:
-
-1. Solo hay **dos resultados**: éxito ($p$) o fracaso ($q$)
-2. Las probabilidades son **constantes** y $p + q = 1$
-3. Cada prueba es **independiente** de las anteriores
-
-Es el **átomo** de los modelos probabilísticos. Todo lo que sigue se construye sobre él.
+**Bernoulli** — experimento con exactamente dos resultados posibles:
+- Éxito ($p$) o fracaso ($q = 1 - p$), pruebas independientes
+- Es el **átomo** de los modelos probabilísticos — todo lo que sigue se construye sobre él
 
 ---
 
@@ -130,7 +106,7 @@ $$f(x) = \frac{1}{\sigma\sqrt{2\pi}} \cdot e^{-\frac{1}{2}\left(\frac{x-\mu}{\si
 
 ---
 
-# La Regla Empírica
+# Regla Empírica
 
 | Intervalo | Probabilidad |
 |:---:|:---:|
@@ -158,17 +134,9 @@ $$z = \frac{39 - 36}{3} = 1 \quad \Rightarrow \quad P(Z < 1) = 0{,}8413$$
 
 El **84%** de los ejemplares pesa menos de 39 kg.
 
----
-
-# Valores clave de $z$
-
-| $z$ | Probabilidad central |
-|:---:|:---:|
-| $\pm 1{,}00$ | 68% |
-| $\pm 1{,}96$ | 95% |
-| $\pm 2{,}58$ | 99% |
-
-Estos valores son la puerta de entrada a la **inferencia estadística**.
+| $z$ | $\pm 1{,}00$ | $\pm 1{,}96$ | $\pm 2{,}58$ |
+|:---|:---:|:---:|:---:|
+| Prob. central | 68% | 95% | 99% |
 
 ---
 
@@ -189,6 +157,11 @@ Estos valores son la puerta de entrada a la **inferencia estadística**.
 
 ---
 
+<!-- _class: lead -->
+# Cierre
+
+---
+
 # Lo que aprendimos
 
 | Concepto | Para qué sirve |
@@ -198,8 +171,12 @@ Estos valores son la puerta de entrada a la **inferencia estadística**.
 | **Modelos discretos** | Uniforme, Bernoulli, Binomial, Poisson |
 | **Distribución Normal** | El modelo continuo más importante |
 
----
+Los modelos no son la realidad — son **aproximaciones útiles** que permiten razonar con rigor sobre fenómenos inciertos.
 
+> *"Todos los modelos son incorrectos, pero algunos son útiles."*
+> — George Box
+
+---
 <!-- _class: lead -->
 
 # Gracias
@@ -207,6 +184,3 @@ Estos valores son la puerta de entrada a la **inferencia estadística**.
 **Estadística I — Síntesis**
 UNM · FCEQyN · 2025
 *Valentino Mende*
-
-*"Todos los modelos son incorrectos, pero algunos son útiles."*
-— George Box

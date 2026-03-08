@@ -30,10 +30,11 @@ La estadística inferencial resuelve esto: permite **obtener conclusiones sobre 
 
 <!-- _class: lead -->
 # Parámetros y Estimadores
+## Dos mundos, un vínculo
 
 ---
 
-# Dos mundos, un vínculo
+# Parámetros y estimadores
 
 | Parámetro (población) | Estimador (muestra) |
 |:---:|:---:|
@@ -44,15 +45,7 @@ La estadística inferencial resuelve esto: permite **obtener conclusiones sobre 
 - **$\mu$** → variable cuantitativa: *¿cuánto?*
 - **$P$** → variable cualitativa o binaria: *¿qué fracción?*
 
----
-
-# La diferencia clave
-
-$\mu$ es un valor **fijo y único** en un momento dado — existe aunque no lo conozcamos.
-
-$\bar{x}$ es una **variable aleatoria**: cada muestra produce un valor distinto.
-
-Por lo tanto, $\bar{x}$ tiene su propia distribución de probabilidad con media y variabilidad propias.
+$\mu$ es un valor **fijo y único** — existe aunque no lo conozcamos. $\bar{x}$ es una **variable aleatoria**: cada muestra produce un valor distinto, con su propia distribución de probabilidad.
 
 > Esto es lo que hace posible toda la inferencia estadística.
 
@@ -68,9 +61,9 @@ Por lo tanto, $\bar{x}$ tiene su propia distribución de probabilidad con media 
 | Método | Descripción |
 |:---|:---|
 | **Simple** | Cada elemento tiene la misma probabilidad de ser elegido |
-| **Sistemático** | Se elige uno cada $k$-ésimo elemento desde un punto de inicio aleatorio |
+| **Sistemático** | Se elige uno cada $k$-ésimo elemento desde un inicio aleatorio |
 | **Estratificado** | Se divide en subgrupos y se muestrea cada uno — garantiza representación |
-| **Por conglomeración** | Se eligen grupos enteros, no elementos individuales de cada grupo |
+| **Por conglomeración** | Se eligen grupos enteros, no elementos individuales |
 
 El **error de muestreo** es la diferencia inevitable entre $\bar{x}$ y $\mu$. No es un error humano: un buen diseño lo *controla*, no lo elimina.
 
@@ -83,9 +76,7 @@ El **error de muestreo** es la diferencia inevitable entre $\bar{x}$ y $\mu$. No
 
 # ¿Qué pasa si tomamos muchas muestras?
 
-Si tomamos todas las muestras posibles de tamaño $n$ y calculamos cada $\bar{x}$, obtenemos una **distribución de probabilidad** de esas medias.
-
-$$\text{Población} \xrightarrow{\text{Muestra 1}} \bar{x}_1 \quad \xrightarrow{\text{Muestra 2}} \bar{x}_2 \quad \cdots \xrightarrow{\text{Muestra k}} \bar{x}_k \;\longrightarrow\; \text{Distribución muestral de } \bar{x}$$
+Si tomamos todas las muestras posibles de tamaño $n$ y calculamos cada $\bar{x}$, obtenemos una **distribución de probabilidad** de esas medias muestrales.
 
 **Propiedad fundamental:**
 
@@ -143,25 +134,13 @@ A medida que $n$ crece, $\sigma_{\bar{x}}$ **disminuye**: muestras más grandes 
 
 <!-- _class: lead -->
 # Estimaciones Puntuales
+## Un primer paso hacia la inferencia
 
 ---
 
-# Un primer paso hacia la inferencia
+# Estimación puntual y los tres caminos
 
 Una **estimación puntual** es un único valor calculado desde la muestra para aproximar un parámetro poblacional.
-
-| Parámetro | Estimador puntual |
-|:---:|:---:|
-| $\mu$ | $\bar{x}$ |
-| $\sigma$ | $s$ |
-| $P$ | $\hat{p}$ |
-
-**Ventaja:** simple y directa.
-**Limitación:** no indica cuán precisa es la estimación.
-
----
-
-# Tres caminos posibles
 
 | Camino | Método | Resultado |
 |:---|:---|:---|
@@ -169,7 +148,12 @@ Una **estimación puntual** es un único valor calculado desde la muestra para a
 | **Estimación puntual** | Calcular $\bar{x}$ sobre una muestra | Rápido, sin medida de confianza |
 | **Intervalo de confianza** | Construir un rango probable para $\mu$ | Rápido **y** con grado de confianza |
 
-> En esta unidad construimos las bases del Camino 2. La Unidad 5 completa el Camino 3.
+La estimación puntual es simple y directa — su limitación es que no indica cuán precisa es la estimación.
+
+---
+
+<!-- _class: lead -->
+# Cierre
 
 ---
 
@@ -183,8 +167,12 @@ Una **estimación puntual** es un único valor calculado desde la muestra para a
 | **TLC** | Garantizar normalidad para $n \geq 30$ |
 | **Estimación puntual** | Primer acercamiento a la inferencia |
 
----
+El TLC es el puente que convierte una muestra en una afirmación rigurosa sobre la población — con error controlado y cuantificable.
 
+> *"La estadística es la gramática de la ciencia."*
+> — Karl Pearson
+
+---
 <!-- _class: lead -->
 
 # Gracias
@@ -192,6 +180,3 @@ Una **estimación puntual** es un único valor calculado desde la muestra para a
 **Estadística I — Síntesis**
 UNM · FCEQyN · 2025
 *Valentino Mende*
-
-*"La estadística es la gramática de la ciencia."*
-— Karl Pearson

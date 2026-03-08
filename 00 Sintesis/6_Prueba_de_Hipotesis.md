@@ -24,24 +24,12 @@ Una forma de **tomar decisiones sobre parámetros poblacionales** a partir de un
 
 *¿Cambió algo tras una actualización? ¿El sistema funciona como prometió el fabricante?*
 
-Toda prueba parte de dos hipótesis opuestas:
-
 | | $H_0$ — Hipótesis Nula | $H_1$ — Hipótesis Alternativa |
 |:---|:---|:---|
 | **Rol** | Estado actual. Lo que se asume cierto. | Lo que queremos demostrar. |
 | **Operadores** | $=,\ \leq,\ \geq$ | $\neq,\ <,\ >$ |
 
----
-
-# Una distinción que no es menor
-
-> **Nunca se dice "Acepto $H_0$".**
-
-La prueba solo evalúa si hay *evidencia suficiente* para rechazarla.
-
-$$\boxed{\text{Conclusión correcta cuando la evidencia es insuficiente: "No se rechaza } H_0\text{"}}$$
-
-Esta distinción importa tanto en la academia como **frente a un juzgado**.
+> **Nunca se dice "Acepto $H_0$".** La prueba solo evalúa si hay evidencia suficiente para rechazarla. La conclusión correcta es: **"No se rechaza $H_0$"** — distinción que importa tanto en la academia como frente a un juzgado.
 
 ---
 
@@ -53,7 +41,7 @@ $$\text{p-valor} < \alpha \;\Rightarrow\; \textbf{RECHAZO } H_0 \qquad \text{p-v
 
 | Tipo de prueba | P-valor |
 |:---|:---|
-| Bilateral ($H_1: \mu \neq \mu_0$) | $p = 2 \cdot P(Z > \|Z_{calc}\|)$ |
+| Bilateral ($H_1: \mu \neq \mu_0$) | $p = 2 \cdot P(Z > |Z_{calc}|)$ |
 | Unilateral derecha ($H_1: \mu > \mu_0$) | $p = P(Z > Z_{calc})$ |
 | Unilateral izquierda ($H_1: \mu < \mu_0$) | $p = P(Z < Z_{calc})$ |
 
@@ -83,13 +71,13 @@ Reducir $\alpha$ disminuye el Error Tipo I pero aumenta el riesgo del Tipo II. S
 → Sí → **uso Z**, sin importar $n$.
 
 **② ¿$n \geq 30$?**
-→ Sí → **uso Z** (TCL garantiza normalidad).
-→ No → **uso T-Student** con $gl = n - 1$.
+→ Sí → **uso Z** (TLC garantiza normalidad).
+→ No → **uso T de Student** con $gl = n - 1$.
 
 | Situación | Distribución | Estadístico |
 |:---|:---:|:---:|
 | $\sigma$ conocida, cualquier $n$ | $Z$ | $Z = \dfrac{\bar{x} - \mu_0}{\sigma/\sqrt{n}}$ |
-| $n \geq 30$, $\sigma$ desconocida | $Z$ (TCL) | $Z = \dfrac{\bar{x} - \mu_0}{s/\sqrt{n}}$ |
+| $n \geq 30$, $\sigma$ desconocida | $Z$ (TLC) | $Z = \dfrac{\bar{x} - \mu_0}{s/\sqrt{n}}$ |
 | $n < 30$, $\sigma$ desconocida | $T$ | $T = \dfrac{\bar{x} - \mu_0}{s/\sqrt{n}}$ |
 
 ---
@@ -105,11 +93,11 @@ Reducir $\alpha$ disminuye el Error Tipo I pero aumenta el riesgo del Tipo II. S
 ---
 
 <!-- _class: lead -->
-# Ejemplos con distribución $Z$
+# Ejemplos
 
 ---
 
-# Ejemplo 1: Latencia de un servidor
+# Ejemplo 1 — Z bilateral, rechaza: Latencia de un servidor
 
 $\mu_0 = 50\text{ms}$, $\bar{x} = 55\text{ms}$, $s = 10\text{ms}$, $n = 40$, $\alpha = 0{,}05$
 
@@ -123,40 +111,7 @@ $3{,}16 > 1{,}96$ y $p = 0{,}0016 < 0{,}05$ → **Se rechaza $H_0$**
 
 ---
 
-# Ejemplo 2: Optimización de un script
-
-$\mu_0 = 200\text{ms}$, $\bar{x} = 190\text{ms}$, $s = 25\text{ms}$, $n = 35$, $\alpha = 0{,}05$
-
-$H_0: \mu \geq 200$ vs $H_1: \mu < 200$ → **Unilateral izquierda**. Límite: $-1{,}645$
-
-$$Z = \frac{190 - 200}{25/\sqrt{35}} = \frac{-10}{4{,}22} = \mathbf{-2{,}36}$$
-
-$-2{,}36 < -1{,}645$ → **Se rechaza $H_0$**
-
-> La optimización fue efectiva. El tiempo bajó significativamente.
-
----
-
-# Ejemplo 3: Alertas de un IDS
-
-$\mu_0 = 5$ alertas/día, $\bar{x} = 5{,}2$, $s = 1{,}5$, $n = 50$, $\alpha = 0{,}01$
-
-$H_0: \mu = 5$ vs $H_1: \mu \neq 5$ → **Bilateral**. Límites: $\pm 2{,}58$
-
-$$Z = \frac{5{,}2 - 5}{1{,}5/\sqrt{50}} = \frac{0{,}2}{0{,}21} = \mathbf{0{,}94}$$
-
-$0{,}94$ cae en zona central → **No se rechaza $H_0$**
-
-> La variación puede ser azarosa. Sin evidencia de cambio.
-
----
-
-<!-- _class: lead -->
-# Ejemplos con T de Student
-
----
-
-# Ejemplo 4: Temperatura de una GPU
+# Ejemplo 2 — T unilateral derecha, rechaza: Temperatura de una GPU
 
 $\mu_0 = 85°C$, $\bar{x} = 88°C$, $s = 3°C$, $n = 10$, $gl = 9$, $\alpha = 0{,}05$
 
@@ -170,7 +125,7 @@ $3{,}16 > 1{,}833$ → **Se rechaza $H_0$**
 
 ---
 
-# Ejemplo 5: Tiempo de registro (UX)
+# Ejemplo 3 — T unilateral izquierda, no rechaza: Tiempo de registro (UX)
 
 $\mu_0 = 60\text{s}$, $\bar{x} = 58\text{s}$, $s = 5\text{s}$, $n = 16$, $gl = 15$, $\alpha = 0{,}01$
 
@@ -189,19 +144,6 @@ $-1{,}60 > -2{,}602$ → **No se rechaza $H_0$**
 
 ---
 
-# Los tres pasos de toda prueba
-
-**1. Plantear las hipótesis**
-Definir $H_0$ y $H_1$ · Identificar si es bilateral o unilateral
-
-**2. Determinar la zona de rechazo**
-Elegir $Z$ o $T$ · Buscar el valor crítico según $\alpha$ y $gl$
-
-**3. Calcular el estadístico y decidir**
-Comparar con el valor crítico (o calcular el p-valor) · Concluir con palabras
-
----
-
 # Lo que aprendimos
 
 | Concepto | Para qué sirve |
@@ -212,14 +154,9 @@ Comparar con el valor crítico (o calcular el p-valor) · Concluir con palabras
 | **Distribución $Z$** | Muestras grandes o $\sigma$ conocida |
 | **T de Student** | Muestras pequeñas, $\sigma$ desconocida |
 
----
+**Los tres pasos de toda prueba:** plantear $H_0$ y $H_1$ · determinar la zona de rechazo · calcular el estadístico y concluir con palabras.
 
-# Reflexión final
-
-**Un resultado estadísticamente significativo no siempre es importante.**
-**Y un resultado importante no siempre es estadísticamente significativo.**
-
-El nivel $\alpha$, el tamaño de muestra y el contexto son parte de la decisión, no solo el número final.
+**Un resultado estadísticamente significativo no siempre es importante — y uno importante no siempre es significativo.** El nivel $\alpha$, el tamaño de muestra y el contexto son parte de la decisión.
 
 > *"El experimento es el único juez de la verdad científica."*
 > — Richard Feynman

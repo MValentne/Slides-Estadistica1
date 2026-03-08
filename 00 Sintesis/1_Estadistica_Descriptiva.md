@@ -13,38 +13,32 @@ paginate: true
 ---
 
 <!-- _class: lead -->
-# ¿Qué es la Estadística?
+# Estadística Descriptiva
+## Organizar, resumir y comunicar datos
 
 ---
 
-# Definición y ramas
-
-La estadística es un conjunto de técnicas que, partiendo de la observación de un fenómeno, permite obtener conclusiones útiles.
+# Contexto: ¿qué es la estadística?
 
 | Rama | Función |
 |:---|:---|
 | **Descriptiva** | Recoger, clasificar, resumir y analizar datos |
 | **Inferencial** | Generar predicciones con cierto grado de confianza |
 
-> Las ramas no se oponen — **se complementan**.
+| Concepto | Definición |
+|:---|:---|
+| **Población (N)** / **Muestra (n)** | Conjunto total / subconjunto representativo |
+| **Parámetro** / **Estadístico** | Medida de la población / de la muestra |
+| **Variable cuantitativa** | Discreta (contada) o continua (medida) |
+| **Variable cualitativa** | Nominal (sin orden) u ordinal (con orden) |
 
----
-
-# Conceptos clave
-
-- **Población (N):** conjunto total de unidades de análisis
-- **Muestra (n):** subconjunto representativo de la población
-- **Parámetro:** medida numérica que describe la **población**
-- **Estadístico / Estimador:** medida numérica que describe la **muestra**
-
-**Variables:**
-- *Cuantitativas:* discretas (enteras) o continuas (fraccionarias)
-- *Cualitativas:* nominales (sin orden) u ordinales (con orden)
+> Esta unidad se ocupa exclusivamente de **describir** — sin predecir ni validar.
 
 ---
 
 <!-- _class: lead -->
 # Distribución de Frecuencias
+## El primer paso: organizar los datos
 
 ---
 
@@ -52,17 +46,17 @@ La estadística es un conjunto de técnicas que, partiendo de la observación de
 
 Organiza los datos por clases o intervalos para facilitar el análisis.
 
-| Tamaño (KB) | $f_i$ | $F_i$ |
-|:---:|:---:|:---:|
-| 0 – 100 | 22 | 22 |
-| 100 – 200 | 35 | 57 |
-| 200 – 300 | 24 | 81 |
-| 300 – 400 | 13 | 94 |
-| 400 – 500 | 6 | 100 |
+| Tamaño (KB) | $f_i$ | $F_i$ | $h_i$ |
+|:---:|:---:|:---:|:---:|
+| 0 – 100 | 22 | 22 | 0,22 |
+| 100 – 200 | 35 | 57 | 0,35 |
+| 200 – 300 | 24 | 81 | 0,24 |
+| 300 – 400 | 13 | 94 | 0,13 |
+| 400 – 500 | 6 | 100 | 0,06 |
 
 - **$f_i$** (absoluta): veces que aparece la modalidad
 - **$F_i$** (acumulada): suma progresiva de $f_i$
-- **Frecuencia relativa:** $h_i = f_i / N \in [0,1]$
+- **$h_i$** (relativa): $f_i / N \in [0,1]$
 
 ---
 
@@ -76,12 +70,15 @@ $$k \approx 1 + 3{,}322 \cdot \log_{10}(n)$$
 
 $$\text{Amplitud} = \frac{\text{Rango}}{k} = \frac{\text{Máx} - \text{Mín}}{k}$$
 
-**Marca de clase:** punto medio del intervalo → usado para cálculos sobre datos agrupados.
+**Marca de clase:** punto medio del intervalo, usada para calcular la media sobre datos agrupados:
+
+$$\bar{x} = \frac{\sum f_i \cdot x_i}{n}$$
 
 ---
 
 <!-- _class: lead -->
 # Medidas de Tendencia Central
+## ¿Dónde está el "centro" de los datos?
 
 ---
 
@@ -93,28 +90,35 @@ $$\text{Amplitud} = \frac{\text{Rango}}{k} = \frac{\text{Máx} - \text{Mín}}{k}
 | **Mediana** | valor central ordenado | Robusta a extremos | No usa todos los datos |
 | **Moda** | valor más frecuente | Funciona con cualitativos | Puede no existir |
 
-En distribución **simétrica:** $\text{Media} = \text{Mediana} = \text{Moda}$
+En distribución **simétrica:** Media $=$ Mediana $=$ Moda
 
-En distribución **asimétrica:** difieren entre sí.
+En distribución **asimétrica:** difieren — y esa diferencia es informativa.
 
 ---
 
-# Media para datos agrupados
+# Ejemplo: efecto de un valor extremo
 
-$$\bar{x} = \frac{\sum f_i \cdot x_i}{n}$$
+Salarios mensuales (en miles): **22, 24, 25, 26, 26, 27, 28, 150**
 
-donde $x_i$ es la **marca de clase** y $f_i$ la frecuencia de cada intervalo.
+$$\bar{x} = \frac{22+24+25+26+26+27+28+150}{8} = \mathbf{41{,}0}$$
+
+$$\text{Mediana} = \frac{26+26}{2} = \mathbf{26{,}0} \qquad \text{Moda} = \mathbf{26}$$
+
+El valor extremo (150) arrastra la media hacia arriba — **ningún empleado gana cerca de 41**.
+
+> En distribuciones asimétricas, la **mediana** representa mejor al grupo que la media.
 
 ---
 
 <!-- _class: lead -->
 # Medidas de Posición
+## Ubicar un dato dentro de la distribución
 
 ---
 
 # Cuartiles, Deciles y Percentiles
 
-Dividen los datos ordenados en partes iguales para **ubicar un dato respecto al resto**.
+Dividen los datos ordenados en partes iguales.
 
 | Medida | Divisiones | Referencia |
 |:---|:---:|:---|
@@ -136,42 +140,46 @@ Mide la dispersión del **50% central**, robusto frente a valores extremos.
 
 $$x < Q_1 - 1{,}5 \cdot IQR \quad \text{o} \quad x > Q_3 + 1{,}5 \cdot IQR$$
 
-El **boxplot** representa visualmente $Q_1$, $Q_2$, $Q_3$, mínimos, máximos y outliers.
+El **boxplot** representa visualmente $Q_1$, $Q_2$, $Q_3$, mínimos, máximos y outliers en una sola figura.
 
 ---
 
 <!-- _class: lead -->
 # Medidas de Dispersión
+## ¿Qué tan variables son los datos?
 
 ---
 
-# ¿Por qué medir la dispersión?
-
-Dos conjuntos pueden tener la **misma media** pero diferir en cómo se distribuyen sus datos.
+# Las medidas de dispersión
 
 | Medida | Fórmula | Observación |
 |:---|:---|:---|
-| **Rango** | Máx $-$ Mín | Simple, sensible a extremos |
-| **Varianza** | $s^2 = \frac{\sum(x_i-\bar{x})^2}{n-1}$ | Eleva desviaciones al cuadrado |
+| **Rango** | Máx $-$ Mín | Simple, muy sensible a extremos |
+| **Varianza** | $s^2 = \frac{\sum(x_i-\bar{x})^2}{n-1}$ | Penaliza desviaciones grandes |
 | **Desv. estándar** | $s = \sqrt{s^2}$ | Mismas unidades que la variable |
-| **Coef. variación** | $CV = \frac{s}{\bar{x}} \cdot 100$ | Permite comparar distribuciones |
+| **Coef. variación** | $CV = \frac{s}{\bar{x}} \cdot 100$ | Permite comparar distribuciones distintas |
 
 ---
 
-# Distribución Normal — Regla Empírica
+# Ejemplo: la media sola no alcanza
 
-Cuando la distribución es **aproximadamente normal**:
+Dos sistemas con tiempos de respuesta (ms):
 
-$$68\% \text{ de datos en } \bar{x} \pm 1s$$
-$$95\% \text{ de datos en } \bar{x} \pm 2s$$
-$$99{,}7\% \text{ de datos en } \bar{x} \pm 3s$$
+$$A = \{48, 50, 50, 52\} \qquad B = \{10, 30, 70, 90\}$$
 
-Con solo **media** y **desviación estándar** queda completamente determinada.
+$$\bar{x}_A = \bar{x}_B = 50 \text{ ms}$$
+
+$$s_A \approx 1{,}6 \text{ ms} \qquad s_B \approx 34{,}2 \text{ ms}$$
+
+> **Misma media, variabilidad completamente distinta.** El sistema B es impredecible — algo que la media oculta por completo.
+
+El CV permite comparar dispersiones entre variables con distintas escalas o unidades.
 
 ---
 
 <!-- _class: lead -->
-# Asimetría y Curtosis
+# Medidas de Forma
+## Asimetría y Curtosis
 
 ---
 
@@ -184,10 +192,10 @@ $$g_1 = \frac{\frac{1}{n}\sum(x_i - \bar{x})^3}{s^3}$$
 | Valor | Interpretación |
 |:---:|:---|
 | $g_1 = 0$ | Distribución simétrica |
-| $g_1 > 0$ | Sesgo hacia la derecha (cola larga a la derecha) |
-| $g_1 < 0$ | Sesgo hacia la izquierda (cola larga a la izquierda) |
+| $g_1 > 0$ | Sesgo hacia la derecha — cola larga a la derecha |
+| $g_1 < 0$ | Sesgo hacia la izquierda — cola larga a la izquierda |
 
-> Se eleva al **cubo** para conservar el signo y dar mayor peso a valores extremos.
+> Se eleva al **cubo** para conservar el signo y amplificar los valores extremos.
 
 ---
 
@@ -203,7 +211,17 @@ $$g_2 = \frac{\frac{1}{n}\sum(x_i - \bar{x})^4}{s^4}$$
 | Leptocúrtica | $> 0$ | Más picuda, colas pesadas |
 | Platicúrtica | $< 0$ | Más achatada, colas livianas |
 
-> La distribución **normal** tiene curtosis $= 3$ y sirve como referencia.
+> La distribución **normal** tiene curtosis $= 3$ y sirve como referencia universal.
+
+---
+
+# Regla Empírica
+
+Cuando la distribución es aproximadamente normal, la desviación estándar delimita zonas precisas:
+
+$$68\% \text{ en } \bar{x} \pm 1s \qquad 95\% \text{ en } \bar{x} \pm 2s \qquad 99{,}7\% \text{ en } \bar{x} \pm 3s$$
+
+Con solo **media** y **desviación estándar** la distribución queda completamente determinada.
 
 ---
 
@@ -214,21 +232,15 @@ $$g_2 = \frac{\frac{1}{n}\sum(x_i - \bar{x})^4}{s^4}$$
 
 # Lo que aprendimos
 
-| Concepto | Para qué sirve |
+| Herramienta | Para qué sirve |
 |:---|:---|
-| **Distribución de frecuencias** | Organizar y tabular datos |
+| **Distribución de frecuencias** | Organizar y tabular los datos |
 | **Tendencia central** | Encontrar el "corazón" de los datos |
+| **Posición** | Ubicar un dato dentro de la distribución |
 | **Dispersión** | Medir la variabilidad |
-| **Posición** | Ubicar datos dentro de la distribución |
 | **Forma** | Describir simetría y concentración |
 
----
-
-# Idea final
-
-La estadística descriptiva **no busca predecir ni validar hipótesis**.
-
-Su objetivo es **comprender y comunicar claramente** la información contenida en los datos.
+La estadística descriptiva **no busca predecir ni validar hipótesis** — busca **comprender y comunicar** la información contenida en los datos.
 
 > *"En Dios confiamos, todos los demás deben traer datos."*
 > — W. Edwards Deming

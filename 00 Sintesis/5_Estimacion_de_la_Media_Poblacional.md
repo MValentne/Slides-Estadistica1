@@ -93,7 +93,7 @@ Con 95% de confianza, la altura media real de la especie se encuentra entre **1,
 ---
 
 <!-- _class: lead -->
-# IC con T de Student — $n < 30$
+# IC con $T$ de Student — $n < 30$
 
 ---
 
@@ -101,21 +101,14 @@ Con 95% de confianza, la altura media real de la especie se encuentra entre **1,
 
 Cuando $n < 30$ y $\sigma$ es desconocida, el TLC no garantiza normalidad suficiente.
 
-La distribución adecuada es la **T de Student**: similar a la normal estándar, pero con **colas más pesadas** que reflejan la mayor incertidumbre.
+La distribución adecuada es la **T de Student**: similar a la normal estándar, pero con colas más pesadas que reflejan la mayor incertidumbre.
 
 $$IC(1-\alpha) = \bar{x} \pm t_{(\nu,\; 1-\alpha/2)} \cdot \frac{s}{\sqrt{n}} \qquad \nu = n - 1$$
-
-A medida que $n$ crece, la T converge a la distribución normal estándar.
-
----
-
-# $Z$ vs. $T$ de Student
 
 | Característica | $Z$ Normal | $T$ de Student |
 |:---|:---:|:---:|
 | Tamaño de muestra | $n \geq 30$ | $n < 30$ |
 | Varianza poblacional | Conocida o estimada | Desconocida |
-| Colas | Delgadas | Más pesadas |
 | Parámetro extra | — | $\nu = n - 1$ |
 
 ---
@@ -136,16 +129,6 @@ $$IC(99\%) = 15{,}4 \pm 2{,}95 \cdot \frac{1{,}5}{\sqrt{16}} = \boxed{[14{,}29\ 
 
 ---
 
-# Ejemplo: peso de cuatro frutas
-
-$n = 4$, $\bar{x} = 28{,}08\ \text{g}$, $s = 1{,}02\ \text{g}$, $\nu = 3$, $t_{(3;\;0{,}975)} = 3{,}182$
-
-$$IC(95\%) = 28{,}08 \pm 3{,}182 \cdot \frac{1{,}02}{\sqrt{4}} = 28{,}08 \pm 1{,}62$$
-
-$$\boxed{IC(95\%) = [26{,}46\ ;\ 29{,}70]\ \text{g}}$$
-
----
-
 <!-- _class: lead -->
 # Guía de Decisión
 
@@ -158,10 +141,10 @@ $$\boxed{IC(95\%) = [26{,}46\ ;\ 29{,}70]\ \text{g}}$$
 | $n \geq 30$ | $Z$ | 1,64 · 1,96 · 2,58 |
 | $n < 30$, $\sigma$ desconocida, población normal | $T$ | tabla con $\nu = n-1$ |
 
-| Método | Resultado | ¿Cuantifica el error? |
-|:---|:---:|:---:|
-| Estimación puntual | Un número: $\bar{x}$ | No |
-| Intervalo de confianza | Un rango: $[a\ ;\ b]$ | Sí |
+---
+
+<!-- _class: lead -->
+# Cierre
 
 ---
 
@@ -175,8 +158,12 @@ $$\boxed{IC(95\%) = [26{,}46\ ;\ 29{,}70]\ \text{g}}$$
 | **IC con $T$** | Muestras pequeñas, $\sigma$ desconocida |
 | **Trade-off confianza/amplitud** | Mayor confianza implica intervalo más ancho |
 
----
+El intervalo de confianza no responde *cuál es el valor exacto de $\mu$* — responde *en qué rango podemos confiar que está*, y con qué certeza.
 
+> *"Sin datos, cualquiera es simplemente alguien con una opinión."*
+> — W. Edwards Deming
+
+---
 <!-- _class: lead -->
 
 # Gracias
@@ -184,6 +171,3 @@ $$\boxed{IC(95\%) = [26{,}46\ ;\ 29{,}70]\ \text{g}}$$
 **Estadística I — Síntesis**
 UNM · FCEQyN · 2025
 *Valentino Mende*
-
-*"Sin datos, cualquiera es simplemente alguien con una opinión."*
-— W. Edwards Deming
