@@ -113,6 +113,56 @@ Donde $\alpha$ es el **nivel de significancia** elegido previamente (típicament
 * Un p-valor pequeño dice: "esto sería muy raro si $H_0$ fuera cierta". La evidencia habla.
 
 ---
+# ¿Cómo se calcula el P-Valor?
+
+El p-valor se obtiene a partir del **estadístico calculado** ($Z_{calc}$ o $T_{calc}$) y el **tipo de prueba**:
+
+| Tipo de prueba | Fórmula del p-valor |
+|:---|:---|
+| Bilateral ($H_1: \mu \neq \mu_0$) | $p = 2 \cdot P(Z > \|Z_{calc}\|)$ |
+| Unilateral derecha ($H_1: \mu > \mu_0$) | $p = P(Z > Z_{calc})$ |
+| Unilateral izquierda ($H_1: \mu < \mu_0$) | $p = P(Z < Z_{calc})$ |
+
+Donde $P(Z > z)$ es el **área bajo la curva normal estándar** a la derecha de $z$, también escrita como $1 - \Phi(z)$, siendo $\Phi$ la función de distribución acumulada.
+
+---
+# El P-Valor: Interpretación Geométrica
+
+Para una prueba **bilateral** con $Z_{calc} = 3.16$:
+
+$$p = 2 \cdot P(Z > 3.16) = 2 \cdot (1 - \Phi(3.16))$$
+
+De tabla: $\Phi(3.16) \approx 0.9992$
+
+$$p = 2 \cdot (1 - 0.9992) = 2 \cdot 0.0008 = \mathbf{0.0016}$$
+
+El área sombreada (la probabilidad de observar algo tan extremo) representa el p-valor.
+Como $0.0016 < 0.05 = \alpha$, **se rechaza $H_0$**.
+
+> El p-valor no es la probabilidad de que $H_0$ sea falsa. Es la probabilidad de *ver estos datos* si $H_0$ fuera verdadera.
+
+---
+# Demostración Simple: ¿La latencia cambió?
+
+Retomamos el ejemplo del servidor: $\bar{x} = 55\text{ms}$, $\mu_0 = 50$, $s = 10$, $n = 40$.
+
+**Paso 1 — Calcular el estadístico:**
+
+$$Z_{calc} = \frac{55 - 50}{10/\sqrt{40}} = \frac{5}{1.58} = 3.16$$
+
+**Paso 2 — Calcular el p-valor** (prueba bilateral):
+
+$$p = 2 \cdot P(Z > 3.16) = 2 \cdot (1 - 0.9992) = 0.0016$$
+
+---
+
+**Paso 3 — Decidir:**
+
+$$p = 0.0016 < \alpha = 0.05 \quad \Rightarrow \quad \textbf{Se rechaza } H_0$$
+
+**Conclusión:** La probabilidad de observar una diferencia tan grande por puro azar es del 0,16%. La evidencia es contundente.
+
+---
 # Los dos errores posibles
 
 Al decidir sobre $H_0$, podemos equivocarnos de dos maneras distintas:
@@ -124,6 +174,8 @@ Al decidir sobre $H_0$, podemos equivocarnos de dos maneras distintas:
 
 * **Error Tipo I:** rechazar $H_0$ cuando en realidad es verdadera. La probabilidad de cometerlo es exactamente $\alpha$.
 * **Error Tipo II:** no rechazar $H_0$ cuando en realidad es falsa. Su probabilidad es $\beta$.
+
+---
 
 Elegir $\alpha$ pequeño reduce el Error Tipo I, pero aumenta el riesgo del Tipo II. Siempre hay un trade-off.
 
