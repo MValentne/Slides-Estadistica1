@@ -42,6 +42,8 @@ La estadística inferencial resuelve esto: permite **obtener conclusiones sobre 
 | Desvío estándar $\sigma$ | Desvío muestral $s$ |
 | Proporción $P$ | Proporción muestral $\hat{p} = \dfrac{\text{casos con la característica}}{n}$ |
 
+---
+
 - **$\mu$** → variable cuantitativa: *¿cuánto?*
 - **$P$** → variable cualitativa o binaria: *¿qué fracción?*
 
@@ -148,8 +150,10 @@ Una **estimación puntual** es un único valor calculado desde la muestra para a
 | **Estimación puntual** | Calcular $\bar{x}$ sobre una muestra | Rápido, sin medida de confianza |
 | **Intervalo de confianza** | Construir un rango probable para $\mu$ | Rápido **y** con grado de confianza |
 
-La estimación puntual es simple y directa — su limitación es que no indica cuán precisa es la estimación.
+---
 
+La estimación puntual es simple y directa — su limitación es que no indica cuán precisa es la **estimación**.
+* Se desarrolla en la siguiente unidad.
 ---
 
 <!-- _class: lead -->
@@ -166,6 +170,8 @@ La estimación puntual es simple y directa — su limitación es que no indica c
 | **Distribución de muestreo** | Entender el comportamiento de $\bar{x}$ |
 | **TLC** | Garantizar normalidad para $n \geq 30$ |
 | **Estimación puntual** | Primer acercamiento a la inferencia |
+
+---
 
 El TLC es el puente que convierte una muestra en una afirmación rigurosa sobre la población — con error controlado y cuantificable.
 

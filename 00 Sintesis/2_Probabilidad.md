@@ -40,6 +40,8 @@ La probabilidad nos permite ir más lejos: **cuantificar el azar** y razonar sob
 
 Para calcular probabilidades necesitamos saber cuántos resultados posibles existen y cuántos nos favorecen. Ahí entra la **combinatoria**.
 
+---
+
 | Técnica | Orden | Repetición | Fórmula |
 |:---|:---:|:---:|:---:|
 | **Variaciones** | ✓ | ✗ | $\dfrac{m!}{(m-n)!}$ |
@@ -212,6 +214,8 @@ $$P(\bar{I}/A) = \frac{0{,}9 \cdot 0{,}02}{0{,}1 \cdot 0{,}97 + 0{,}9 \cdot 0{,}
 | **Sucesos y axiomas** | El lenguaje formal para operar |
 | **Tablas y árboles** | Resolver problemas reales con orden |
 | **Prob. Total y Bayes** | Razonar desde efectos hacia causas |
+
+---
 
 **La probabilidad no nos dice qué va a pasar — nos dice cuán sorprendidos deberíamos estar si algo pasa.**
 

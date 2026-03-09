@@ -158,6 +158,8 @@ $$IC(99\%) = 15{,}4 \pm 2{,}95 \cdot \frac{1{,}5}{\sqrt{16}} = \boxed{[14{,}29\ 
 | **IC con $T$** | Muestras pequeñas, $\sigma$ desconocida |
 | **Trade-off confianza/amplitud** | Mayor confianza implica intervalo más ancho |
 
+---
+
 El intervalo de confianza no responde *cuál es el valor exacto de $\mu$* — responde *en qué rango podemos confiar que está*, y con qué certeza.
 
 > *"Sin datos, cualquiera es simplemente alguien con una opinión."*

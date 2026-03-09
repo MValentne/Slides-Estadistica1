@@ -171,6 +171,8 @@ El **84%** de los ejemplares pesa menos de 39 kg.
 | **Modelos discretos** | Uniforme, Bernoulli, Binomial, Poisson |
 | **Distribución Normal** | El modelo continuo más importante |
 
+---
+
 Los modelos no son la realidad — son **aproximaciones útiles** que permiten razonar con rigor sobre fenómenos inciertos.
 
 > *"Todos los modelos son incorrectos, pero algunos son útiles."*

@@ -24,6 +24,8 @@ Una forma de **tomar decisiones sobre parámetros poblacionales** a partir de un
 
 *¿Cambió algo tras una actualización? ¿El sistema funciona como prometió el fabricante?*
 
+---
+**Entramos en materia:**
 | | $H_0$ — Hipótesis Nula | $H_1$ — Hipótesis Alternativa |
 |:---|:---|:---|
 | **Rol** | Estado actual. Lo que se asume cierto. | Lo que queremos demostrar. |
@@ -73,6 +75,8 @@ Reducir $\alpha$ disminuye el Error Tipo I pero aumenta el riesgo del Tipo II. S
 **② ¿$n \geq 30$?**
 → Sí → **uso Z** (TLC garantiza normalidad).
 → No → **uso T de Student** con $gl = n - 1$.
+
+---
 
 | Situación | Distribución | Estadístico |
 |:---|:---:|:---:|
@@ -155,6 +159,8 @@ $-1{,}60 > -2{,}602$ → **No se rechaza $H_0$**
 | **T de Student** | Muestras pequeñas, $\sigma$ desconocida |
 
 **Los tres pasos de toda prueba:** plantear $H_0$ y $H_1$ · determinar la zona de rechazo · calcular el estadístico y concluir con palabras.
+
+---
 
 **Un resultado estadísticamente significativo no siempre es importante — y uno importante no siempre es significativo.** El nivel $\alpha$, el tamaño de muestra y el contexto son parte de la decisión.
 

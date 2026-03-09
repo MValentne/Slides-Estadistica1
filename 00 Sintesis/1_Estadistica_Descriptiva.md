@@ -19,12 +19,19 @@ paginate: true
 ---
 
 # Contexto: ¿qué es la estadística?
+* La estadistica es una **metaciencia**.
+* Es la ciencia que recoge, organiza, analiza e interpreta datos para describir fenómenos, identificar patrones y tomar decisiones informadas bajo incertidumbre.   
+
+**Se divide en:**
 
 | Rama | Función |
 |:---|:---|
 | **Descriptiva** | Recoger, clasificar, resumir y analizar datos |
 | **Inferencial** | Generar predicciones con cierto grado de confianza |
 
+---
+
+**Definiciones elementales:**
 | Concepto | Definición |
 |:---|:---|
 | **Población (N)** / **Muestra (n)** | Conjunto total / subconjunto representativo |
@@ -42,6 +49,14 @@ paginate: true
 
 ---
 
+# Introducción a las frecuencias
+
+- **$f_i$** (absoluta): veces que aparece la modalidad
+- **$F_i$** (acumulada): suma progresiva de $f_i$
+- **$h_i$** (relativa): $f_i / N 
+
+---
+
 # Tabla de frecuencias
 
 Organiza los datos por clases o intervalos para facilitar el análisis.
@@ -54,9 +69,6 @@ Organiza los datos por clases o intervalos para facilitar el análisis.
 | 300 – 400 | 13 | 94 | 0,13 |
 | 400 – 500 | 6 | 100 | 0,06 |
 
-- **$f_i$** (absoluta): veces que aparece la modalidad
-- **$F_i$** (acumulada): suma progresiva de $f_i$
-- **$h_i$** (relativa): $f_i / N \in [0,1]$
 
 ---
 
@@ -239,6 +251,8 @@ Con solo **media** y **desviación estándar** la distribución queda completame
 | **Posición** | Ubicar un dato dentro de la distribución |
 | **Dispersión** | Medir la variabilidad |
 | **Forma** | Describir simetría y concentración |
+
+---
 
 La estadística descriptiva **no busca predecir ni validar hipótesis** — busca **comprender y comunicar** la información contenida en los datos.
 
