@@ -102,7 +102,8 @@ $$f(x) = \frac{1}{\sigma\sqrt{2\pi}} \cdot e^{-\frac{1}{2}\left(\frac{x-\mu}{\si
 **Propiedades clave:**
 - Simétrica — Media = Mediana = Moda = $\mu$
 - Área total bajo la curva = **1**
-- Puntos de inflexión en $\mu \pm \sigma$
+- La curva cambia de "curvatura" en los puntos μ±σ\mu \pm \sigma μ±σ, es decir, donde la campana pasa de cerrarse hacia el centro a abrirse hacia los costados
+
 
 ---
 

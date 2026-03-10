@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>QR - Playlist Estadística</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f0f4ff;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 340px;
+    }
+    h2 {
+      color: #1F3864;
+      margin: 0;
+      font-size: 18px;
+      text-align: center;
+    }
+    p {
+      color: #888;
+      font-size: 13px;
+      margin: 0;
+      text-align: center;
+      word-break: break-all;
+    }
+    #qrcode canvas, #qrcode img {
+      border-radius: 8px;
+    }
+    .label {
+      background: #1F3864;
+      color: white;
+      border-radius: 8px;
+      padding: 6px 18px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    @media print {
+      body { background: white; }
+      .card { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="label">ESTADÍSTICA I</span>
+    <h2>Playlist — YouTube</h2>
+    <div id="qrcode"></div>
+    <p>https://www.youtube.com/playlist?list=PLcTGxB82zQPPkGcuCw-wArKj4lZaiI6mh</p>
+  </div>
+
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://www.youtube.com/playlist?list=PLcTGxB82zQPPkGcuCw-wArKj4lZaiI6mh",
+      width: 220,
+      height: 220,
+      colorDark: "#1F3864",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
