@@ -35,6 +35,29 @@ Una forma de **tomar decisiones sobre parámetros poblacionales** a partir de un
 
 ---
 
+
+# Flujo de una prueba de hipótesis
+
+**① Formalizar el conflicto**
+Plantear $H_0$ y $H_1$ con precisión. Definir $\alpha$ (el riesgo que estamos dispuestos a asumir).
+
+**② Elegir la herramienta**
+¿$\sigma$ conocida? ¿$n \geq 30$? → **Z**. ¿$n < 30$, $\sigma$ desconocida? → **T** con $gl = n-1$.
+
+**③ Calcular el estadístico de prueba**
+$$Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} \qquad \text{o} \qquad T = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}$$
+
+
+---
+
+**④ Determinar la zona de rechazo**
+Obtener el valor crítico según $\alpha$ y el tipo de prueba (bilateral / unilateral).
+
+**⑤ Concluir con palabras**
+Comparar estadístico con valor crítico, o p-valor con $\alpha$. Nunca "acepto $H_0$" — solo "no la rechazo".
+
+---
+
 # El P-Valor
 
 Probabilidad de obtener un resultado tan extremo como el observado, **asumiendo que $H_0$ es verdadera**.
@@ -43,7 +66,7 @@ $$\text{p-valor} < \alpha \;\Rightarrow\; \textbf{RECHAZO } H_0 \qquad \text{p-v
 
 | Tipo de prueba | P-valor |
 |:---|:---|
-| Bilateral ($H_1: \mu \neq \mu_0$) | $p = 2 \cdot P(Z > |Z_{calc}|)$ |
+| Bilateral ($H_1: \mu \neq \mu_0$) | $p = 2 \cdot P(Z > \lvert Z_{calc} \rvert)$ |
 | Unilateral derecha ($H_1: \mu > \mu_0$) | $p = P(Z > Z_{calc})$ |
 | Unilateral izquierda ($H_1: \mu < \mu_0$) | $p = P(Z < Z_{calc})$ |
 
@@ -77,6 +100,8 @@ Reducir $\alpha$ disminuye el Error Tipo I pero aumenta el riesgo del Tipo II. S
 → No → **uso T de Student** con $gl = n - 1$.
 
 ---
+
+**Valor de prueba**
 
 | Situación | Distribución | Estadístico |
 |:---|:---:|:---:|

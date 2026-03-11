@@ -20,7 +20,7 @@ paginate: true
 
 # Estimación puntual
 
-Un único valor calculado desde la muestra para aproximar un parámetro poblacional:
+Consiste en un único valor calculado desde la muestra para aproximar un parámetro poblacional:
 
 $$\mu \approx \bar{x} \qquad \sigma \approx s \qquad P \approx \hat{p}$$
 
@@ -139,7 +139,7 @@ $$IC(99\%) = 15{,}4 \pm 2{,}95 \cdot \frac{1{,}5}{\sqrt{16}} = \boxed{[14{,}29\ 
 | Situación | Distribución | Valores clave |
 |:---|:---:|:---|
 | $n \geq 30$ | $Z$ | 1,64 · 1,96 · 2,58 |
-| $n < 30$, $\sigma$ desconocida, población normal | $T$ | tabla con $\nu = n-1$ |
+| $n < 30$, $\sigma$ desconocida, población normal | $T$ | $\nu = n-1$ |
 
 ---
 

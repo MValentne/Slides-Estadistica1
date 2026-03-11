@@ -140,7 +140,7 @@ A medida que $n$ crece, $\sigma_{\bar{x}}$ **disminuye**: muestras más grandes 
 
 ---
 
-# Estimación puntual y los tres caminos
+# Estimación puntual y los tres caminos a $\mu$
 
 Una **estimación puntual** es un único valor calculado desde la muestra para aproximar un parámetro poblacional.
 
